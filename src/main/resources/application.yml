@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: ${PWD}
+          uri: https://github.com/dennisvanloon/spring-cloud-config
           search-paths:
-            - configuration_files/'{application}'
+            - 'configuration_files/{application}'
           default-label: master
