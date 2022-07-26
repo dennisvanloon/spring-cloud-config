@@ -1,0 +1,13 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${PWD}
+          search-paths:
+            - configuration_files/'{application}'
+          default-label: master
