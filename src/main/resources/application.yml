@@ -11,3 +11,5 @@ spring:
           search-paths:
             - 'configuration_files/{application}'
           default-label: master
+
+message: Hello there, this is a message from the config in git
