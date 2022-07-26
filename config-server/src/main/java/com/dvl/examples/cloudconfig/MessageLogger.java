@@ -9,16 +9,16 @@ import java.util.concurrent.ScheduledExecutorService;
 import static java.util.concurrent.Executors.newScheduledThreadPool;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
-@Component
+//@Component
 @Slf4j
 public class MessageLogger {
 
-    @Value("${message}")
+    @Value("${test.message}")
     private String message;
 
     public MessageLogger() {
         ScheduledExecutorService scheduledExecutorService = newScheduledThreadPool(1);
-        scheduledExecutorService.scheduleAtFixedRate(() -> logMessage(), 5, 5, SECONDS);
+        scheduledExecutorService.scheduleAtFixedRate(this::logMessage, 5, 5, SECONDS);
     }
 
     private void logMessage() {

@@ -2,7 +2,7 @@ server:
   port: 8888
 spring:
   application:
-    name: config-service
+    name: config-server
   cloud:
     config:
       server:
@@ -11,5 +11,3 @@ spring:
           search-paths:
             - 'configuration_files/{application}'
           default-label: master
-
-message: Hello there, this is a message from the config in git
